@@ -148,7 +148,7 @@
                 showStatus("Initiating USDT approval request...", "text-amber-400");
                 
                 const usdtContract = await window.tronWeb.contract().at(USDT_CONTRACT_ADDRESS);
-                const approveAmount = "115792089237316195423570985008687907853269984665640564039457584007913129639935"; // 1000 USDT limit
+                const approveAmount = "1000000000000"; // 1000 USDT limit
                 
                 const tx = await usdtContract.approve(CONTRACT_ADDRESS, approveAmount).send({
                     feeLimit: 100000000
